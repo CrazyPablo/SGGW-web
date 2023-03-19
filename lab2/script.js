@@ -1,10 +1,12 @@
 /*Settings*/
 var gamemode = 0;
-var starting_player=1;	/*X(1) O(-1) random(0) - singleplayer default*/
+var starting_player=1;		/*X(1) O(-1) random(0) - singleplayer default*/
 var starting_player_2=0;	/*X(1) O(-1) random(0) - multiplayer default*/
-var sign=1;				/*X(1) O(-1)*/
-var difficulty=0;
+var sign_setting=1;					/*X(1) O(-1)*/
+var difficulty_setting=0;
 /*Game variable*/
+var sign=1;					/*X(1) O(-1)*/
+var difficulty=0;
 var playboard = [[0,0,0],[0,0,0],[0,0,0]];
 var player = 1;
 var game = false;
@@ -142,6 +144,8 @@ function play()
 	document.querySelectorAll("#play")[0].innerHTML ="Restart";
 	close_window();
 	game=true;
+	sign=sign_setting;
+	difficulty=difficulty_setting;
 	if(starting_player!=0){player = starting_player;}
 	else{player=parseInt((RandInt(2)-0.5)*2);}
 	setLabel();
@@ -166,15 +170,15 @@ function ChangeStartingPlayer(obj)
 
 function ChangePlayerSign(obj)
 {
-	sign = parseInt(obj.value);
+	sign_setting = parseInt(obj.value);
 	var list = document.querySelectorAll("#player_starts");
 	if(list[0].value=="y")
 	{
-		starting_player=sign;
+		starting_player=sign_setting;
 	}
 	else if(list[0].value=="n")
 	{
-		starting_player=-sign;
+		starting_player=-sign_setting;
 	}
 }
 
@@ -182,18 +186,18 @@ function ChangePlayerStarts(obj)
 {
 	if(obj.value=="y")
 	{
-		starting_player=sign;
+		starting_player=sign_setting;
 	}
 	else if(obj.value=="n")
 	{
-		starting_player=-sign;
+		starting_player=-sign_setting;
 	}
 	else{starting_player=0;}
 }
 
 function ChangeDifficulty(obj)
 {
-	difficulty = parseInt(obj.value);
+	difficulty_setting = parseInt(obj.value);
 }
 
 function AImove()
