@@ -1,1 +1,0 @@
-Na stronie W3C Validator opcja validate by URL nie działa ponieważ hosting wykrywa to jako bota i blokuje dostęp do strony, ale kod źródłowy validate by direct input już działa poprawnie.
