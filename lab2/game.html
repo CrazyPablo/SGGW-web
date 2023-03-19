@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Tic-Tac-Toe</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<meta name="description" content="Tic-Tac-Toe">
+	<meta name="keywords" content="Tic-Tac-Toe,game,singleplayer,multiplayer">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+	</style>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body onload="init()">
+	<div id="menu">
+		<header>
+			<h1>Tic-Tac-Toe</h1>
+		</header>		
+		<nav>
+			<ul>
+				<li onclick="changeMode(0)"><p>Singleplayer</p><p class="sign">X</p></li>
+				<li onclick="changeMode(1)"><p>Multiplayer</p><p class="sign"></p></li>
+			</ul>
+		</nav>
+	</div>
+	<main>
+		<div id="game">
+			<h3>Click Play to start</h3>
+			<table>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<div id="leftpanel">
+			<h2>Tic-Tac-Toe - Singleplayer gamemode</h2>
+			<div id="options">
+				<button id="play" type="button" onclick="play()">Play</button>
+				<div id="singleplayer">
+					<label for="player_sign">Player's sign:</label>
+					<select id="player_sign" name="player_sign" onchange="ChangePlayerSign(this);this.blur();">
+						<option value="1" selected>X</option>
+						<option value="-1">O</option>
+					</select>
+					<div class="clear"></div>
+					<label for="player_starts">Player starts:</label><br>
+					<select id="player_starts" name="player_starts" onchange="ChangePlayerStarts(this);this.blur();">
+						<option value="y" selected>Yes</option>
+						<option value="n">No</option>
+						<option value="r">Random</option>
+					</select>
+					<div class="clear"></div>
+					<label for="diffuculty">Diffuculty level:</label><br>
+					<select id="diffuculty" name="diffuculty" onchange="ChangeDifficulty(this);this.blur();">
+						<option value="0" selected>Easy</option>
+						<option value="1">Medium</option>
+						<option value="2">Hard</option>
+					</select>
+					<div class="clear"></div>
+				</div>
+				<div id="multiplayer">
+					<label for="starting_player">Player starting:</label>
+					<select id="starting_player" name="starting_player" onchange="ChangeStartingPlayer(this);this.blur();">
+						<option value="1">Player 1 (X)</option>
+						<option value="-1">Player 2 (O)</option>
+						<option value="0" selected>Random</option>
+					</select>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div id="gameover">
+			<button id="close" type="button" onclick="close_window()">X</button>
+			<div class="clear"></div>
+			<h4>Game over</h4>
+			<button type="button" onclick="play()">Play again</button>
+		</div>
+	</main>
+</body>
+</html>

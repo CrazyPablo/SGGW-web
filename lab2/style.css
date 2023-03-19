@@ -1,0 +1,259 @@
+body
+{
+	margin: 0;
+	padding:0;
+	font-family: 'Open Sans', sans-serif;
+	font-size:0;
+	background-color:#e6e6e6;
+}
+
+#menu
+{
+	width: 100%;
+	margin: 0;
+	background-color:black;/*#FF8000;*/
+	color:white;
+	font-weight: bold;
+}
+
+#header
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+h1
+{
+	margin: 0;
+	padding-top:15px;
+	padding-bottom:15px;
+	text-align:center;
+	font-size:32px;
+	color:#FF8000;
+}
+
+#menu nav
+{
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+#menu nav ul	/*#menu nav ul*/
+{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+}
+
+#menu nav li	/*#menu nav ul li*/
+{
+	display:inline-block;
+	vertical-align:top;
+	width:50%;
+	font-size:24px;
+	text-align:center;
+	overflow:hidden;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+
+#menu nav li:hover	/*#menu nav ul li:hover*/
+{
+	background-color:#FF8000;
+	color:black;
+}
+
+#menu p 	/*#menu nav ul li p*/
+{
+	display:inline-block;
+	vertical-align:top;
+	margin:0;
+}
+
+.sign
+{
+	color:#FF8000;
+	padding-left:20px;
+}
+
+#menu nav li:hover .sign	/*#menu nav ul li:hover .sign*/
+{
+	color:black;
+}
+
+main
+{
+	width: calc(100% - 50px);
+	padding:25px;
+	z-index:1;
+}
+
+#game,#leftpanel
+{
+	display:inline-block;
+	vertical-align:top;
+}
+
+#game
+{
+	width: 40%;
+}
+
+h3
+{
+	width:100%;
+	text-align:center;
+	font-size:24px;
+	margin:0;
+}
+
+table
+{
+	border-collapse: collapse;
+	width: 100%;
+	table-layout:fixed;
+	aspect-ratio: 1/1;
+	background-color:white;
+}
+
+tr
+{
+	height:33.33%;
+}
+
+td
+{
+	border:3px solid black;
+	padding:2.5%;
+}
+
+table img
+{
+	width:100%;
+}
+
+#leftpanel
+{
+	width: 50%;
+	padding-left:10%;
+}
+
+#leftpanel h2
+{
+	margin:25px 0;
+	font-size: 36px;
+	color:#FF8000;
+	text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+}
+
+#options
+{
+	width:50%;
+}
+
+button
+{
+	width:100%;
+	padding: 15px 0;
+	margin-top:25px;
+	text-align: center;
+	border: none;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight:bold;	
+}
+
+button:hover
+{
+	color: #FF8000;
+	outline: 5px solid #FF8000;
+}
+
+#singleplayer
+{
+	display:block;
+}
+
+#multiplayer
+{
+	display:none;
+}
+
+label,select
+{
+	display:block;
+	width:50%;
+	padding: 5px 0;
+	margin:25px 0 0 0;
+	border: none;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight:bold;
+}
+
+label
+{
+	float:left;
+}
+
+select,input
+{
+	float:right;
+}
+
+.clear
+{
+	clear:both;
+}
+
+#gameover
+{
+	display:none;
+	position:absolute;
+	top:calc(60% - 120px);
+	z-index:2;
+	width:300px;
+	height:150px;
+	margin-left:calc(20% - 165px);
+	padding:15px;
+	background-color:black;
+	font-size:24px;
+	font-weight:bold;
+}
+
+#gameover h4,p
+{
+	margin:0;
+}
+
+#gameover h4
+{
+	color:#FF8000;
+	text-align:center;
+}
+
+#close
+{
+	width:auto;
+	margin:0;
+	display:block;
+	padding: 0 5px;
+	float:right;
+	border:none !important;
+}
+
+#gameover button
+{
+	border: 3px solid white;
+}
+
+#gameover button:hover
+{
+	border-color: #FF8000;
+	outline:none;
+}
