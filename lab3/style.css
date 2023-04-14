@@ -52,11 +52,12 @@ h1 {
   display: block;
   float: left;
   width: 80%;
+  max-width: calc(100% - 100px);
 }
 #nav_small p {
   display: block;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 15px 0 15px 0;
   background-color: #009933;
   text-align: center;
   font-size: 16px;
@@ -74,6 +75,7 @@ h1 {
   padding: 0;
   width: 80%;
   list-style-type: none;
+  max-width: calc(100% - 100px);
 }
 #nav_small ul li {
   display: block;
@@ -141,6 +143,7 @@ h1 {
 #language {
   display: block;
   width: 20%;
+  min-width: 100px;
   float: right;
 }
 #language p {
@@ -170,6 +173,7 @@ h1 {
   padding: 0;
   width: 20%;
   list-style-type: none;
+  min-width: 100px;
 }
 #language ul li {
   display: block;
@@ -224,7 +228,8 @@ h1 {
 main {
   display: inline-block;
   vertical-align: top;
-  width: calc(100% - 30px);
+  box-sizing: border-box;
+  width: 100%;
   z-index: 5;
   margin-top: 0;
   padding: 15px;
@@ -232,29 +237,35 @@ main {
 }
 @media only screen and (min-width: 992px) {
   main {
-    width: calc(80% - 30px);
+    width: 80%;
   }
 }
 main article {
   display: block;
   float: left;
-  width: 100%;
-  max-width: 100%;
   font-size: 16px;
 }
-main article#first {
-  width: 80%;
-  max-width: calc(100% - 215px);
+@media only screen and (min-width: 768px) {
+  main article#first {
+    width: 80%;
+    max-width: calc(100% - 230px);
+  }
 }
 @media only screen and (min-width: 1200px) {
   main article {
     width: 80%;
-    max-width: calc(100% - 215px);
+    max-width: calc(100% - 230px);
   }
 }
 h2 {
   font-size: 24px;
   margin: 0;
+  margin-bottom: 20px;
+}
+@media only screen and (min-width: 768px) {
+  h2 {
+    margin: 0;
+  }
 }
 h4 {
   margin-top: 20px;
@@ -266,21 +277,61 @@ p {
 }
 #side {
   display: block;
-  float: right;
-  width: calc(20% - 16px);
-  min-width: 200px;
-  align-items: center;
-  padding-left: 15px;
+  box-sizing: border-box;
+  width: 100%;
   z-index: 5;
+  align-items: center;
   font-size: 16px;
 }
-#side figure {
-  margin: 0;
+@media only screen and (min-width: 768px) {
+  #side {
+    float: right;
+    width: 20%;
+    min-width: 230px;
+    padding-left: 15px;
+  }
 }
-img {
+#side figure {
+  width: 50%;
+  margin: 0;
+  float: left;
+}
+@media only screen and (min-width: 768px) {
+  #side figure {
+    float: none;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #side figure {
+    float: none;
+    width: 100%;
+  }
+}
+#side img {
   max-width: 100%;
   height: auto;
   border: 2px solid black;
+}
+#side #stats {
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+  padding-left: 15px;
+}
+@media only screen and (min-width: 768px) {
+  #side #stats {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #side #stats {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
 }
 .label {
   font-weight: bold;
