@@ -12,7 +12,7 @@
 	</style>
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body onload="resize()" onresize="resize()">
+<body onload="resize();" onresize="resize();imgresize();">
 	<header id="pageheader">
 		<h1>Bestiariusz</h1>
 	</header>
@@ -93,7 +93,7 @@
 		<header><h2>Strzyga</h2></header>
 		<div id="side">
 			<figure>
-				<img src="img/strzyga.png" alt="Strzyga">	
+				<img src="img/strzygamin.png" alt="Strzyga" onclick="imgshow()">	
 			</figure>
 			<div id="stats">
 				<table>
@@ -179,5 +179,11 @@
 		<p>Tekst oraz zdjęcia na licencji CC-BY-SA</p>
 	</div>
 	</footer>
+	<div id="img_frame" onclick="imgclose()">
+		<figure>
+			<img src="img/strzyga.jpg" alt="Strzyga">
+		</figure>
+	</div>
+	<div id="grey"></div>
 </body>
 </html>

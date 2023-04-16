@@ -1,6 +1,7 @@
 @dark-green:#003300;
 @green:#009933;
 @light-green:#00cc00;
+@background:#c0c0c0;
 @topmargin:0;
 @screen-xs-min:480px;
 @screen-sm-min:768px;
@@ -14,9 +15,10 @@
 body
 {
 	z-index:0;
+	min-height: 100%;
 	margin: 0;
 	padding:0;
-	background-color:#c0c0c0;
+	background-color:@background;
 	font-family: 'Open Sans', sans-serif;
 	font-size:0px;
 }
@@ -319,6 +321,7 @@ p
 		max-width: 100%;
 		height: auto;
 		border: 2px solid @dark-green;
+		cursor:pointer;
 	}
 	#stats
 	{
@@ -339,6 +342,42 @@ p
 			padding:0;
 		}
 	}
+}
+
+#img_frame
+{
+	display:none;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:15;
+	figure
+	{
+		display:block;
+		width:100%;
+		height:100%;
+		margin:0;
+		img
+		{
+			display:block;
+			max-width:100%;
+			max-height:100%;
+			border: 5px solid @dark-green;
+		}
+	}
+}
+
+#grey
+{
+	display:none;
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:12;
+	background-color:@background;
+	opacity:0.8;
 }
 
 .label
