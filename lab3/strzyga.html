@@ -5,13 +5,14 @@
 	<title>Strzyga - Bestiariusz</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
-	<meta name="description" content="Chrakterystyka demona słowiańskiego - Bagiennika">
+	<meta name="description" content="Chrakterystyka demona słowiańskiego - Strzyga">
 	<meta name="keywords" content="bestiariusz, spis potworów,legendy ludowe,folklore, Strzyga,demon">
 	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 	</style>
+	<script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body onload="resize()" onresize="resize()">
 	<header id="pageheader">
 		<h1>Bestiariusz</h1>
 	</header>
@@ -32,7 +33,7 @@
 				</ul>
 			</nav>
 			<div id="language">
-				<p>Język</p>
+				<p>Język<img src="img/language_ikon.png" alt="language ikon"></p>
 				<ul>
 					<li><a href="#" target="_self">Deutsch</a></li>
 					<li><a href="#" target="_self">English</a></li>
@@ -120,27 +121,54 @@
 			</div>
 			<div class="clear"></div>
 		</div>
-		<article id="first">
-			<h4>Opis</h4>
-			<p>Według badań Aleksandra Brücknera słowiańska strzyga pochodzi bezpośrednio od rzymskiego strix, kobiecego demona o ptasich szponach żywiącego się krwią. W niejasny sposób wierzenia te, prawdopodobnie za pośrednictwem ludów bałkańskich, zostały zaadaptowane przez Słowian, nakładając się częściowo na postaci upiora i wampira.<br>Strzyga była istotą, której pochodzenie i sposób działania były podobne do tych dwóch stworów, dlatego uważa się, że w polskich wierzeniach ludowych mamy do czynienia z jedną postacią znaną w różnych regionach pod kilkoma różnymi nazwami. Do XVIII wieku mówiono bowiem w Polsce na upiora „strzyga” lub „wieszczyca”. Od XVIII wieku stosowano już nazwę „upiór”, kojarząc stwora z demonem fruwającym. Z kolei cechy czarownictwa kojarzone są w polskich źródłach bardziej ze strzygoniem lub strzygą niż z upiorem.<br>Gdy rozpoznano strzygę, przepędzano ją z ludzkich siedzib. Ginęły zazwyczaj w młodym wieku. Gdy jednak jedna dusza umierała, druga żyła dalej, mszcząc się za krzywdy tej pierwszej. Aby przetrwać, musiała polować.</p>
-		</article>
-		<article>
-			<h4>Charakterystyka</h4>
-			<p>Posiadały dwa serca i dwa szeregi zębów. Zazwyczaj przedstawiane, jako krzyżówka człowieka i sowy. Miały nieproporcjonalnie dużą głowę względem ciała, czerwone ślepia i szpony zbliżone do ptasich. Niepozorne na pierwszy rzut oka, jednak szybkie, zwinne i silne na tyle, że były w stanie powalić dorosłego mężczyznę bądź krowę.</p>
-		</article>
-		<article>
-			<h4>Wierzenia</h4>
-			<p>Strzygami zostawali ludzie, którzy urodzili się ze zrośniętymi brwiami, dwiema duszami, dwoma sercami i podwójnym szeregiem zębów, z czego ten drugi był słabo zauważalny. O bycie strzygą posądzano również lunatyków i osoby bez włosów pod pachami.<br><br>Uważano także, iż strzygą jest noworodek, który urodził się z wykształconymi zębami, natomiast starcy mówiący do siebie też mogli być uznani za strzygi.<br>W czasach epidemii często do grobów wkładano ludzi chorych, lecz żywych. Niektórym udawało się wykopać gołymi rękami. Błądzili oni potem z zakrwawionymi rękami, poodrywanymi paznokciami, chorzy i osłabieni. Byli wówczas uważani za strzygi.</p>
-		</article>
-		<article>
-			<h4>Zachowanie</h4>
-			<p>Strzygi latały po nocach w postaci sowy i wysysała krew oraz wnętrzności ludzi, najchętniej dzieci. Jeżeli nie napotykały ludzi, potrafiły się przez jakiś czas zadowolić krwią zwierząt. Zazwyczaj poza polowaniem chodziło o zemstę za krzywdy wyrządzone podczas pierwszego żywota.<br>Według innych źródeł, strzygi nie szkodzą ludziom. Podobnie, jak banshee, zwiastują pewną śmierć kogoś z domowników. Ich przywiązanie do świata żywych wynikało z braku chrztu jednej z dusz i uniemożliwiało to wkroczenie do zaświatów. Zarówno męskie, jak i żeńskie wersje strzyg mogły wracać do swoich żyjących członków rodziny, do swoich domostw i nocami wykonywać swoje dawne obowiązki. Wpływało to na stan rodziny – ich niewyspanie, osłabienie, bladość itd. zrzucano właśnie na działalność strzyg. Strzygonie mogły też psuć świece w kościele.</p>
-		</article>
-		<article>
-			<h4>Metody ochrony</h4>
-			<p>Sposobem na zapobiegnięcie przeistoczeniu się człowieka w strzygę było pochowanie go w specjalny sposób np. twarzą do dołu, z przepaską na oczach, włożenie krzemienia do ust, włożenie pod język kartki z napisem Jezus lub włożenie do trumny drobnych przedmiotów, by strzygoń zajął się ich liczeniem. Innym sposobem było spalenie lub powbijanie gwoździ, pali albo kołka osikowego w różne części ciała zmarłej osoby.<br>Podobno działającą metodą na przepędenie strzygonia było wymierzenie mu policzka lewą ręką. Aby chronić swój dom przed strzygą skuteczne było rozsypanie na krzyż maku w każdym kącie domu. Zabicie w kościelny dzwon również zabijało strzygonia (zamieniało go w smołę).<br>Niektóre podania głoszą, że aby odczarować lub zabić strzygę, należałoby spędzić noc w jej krypcie, śpiąc twarzą w kierunku ziemi. Ponieważ strzygi wykazywały większą aktywność w nocy, w dzień zaś spały, było to trudne zadanie.</p>
-		</article>
-		<div class="clear"></div>
+		<div id="content">
+			<article id="first">
+				<h4>Opis</h4>
+				<p>Według badań Aleksandra Brücknera słowiańska strzyga pochodzi bezpośrednio od rzymskiego strix, kobiecego demona o ptasich szponach żywiącego się krwią. W niejasny sposób wierzenia te, prawdopodobnie za pośrednictwem ludów bałkańskich, zostały zaadaptowane przez Słowian, nakładając się częściowo na postaci upiora i wampira.<br>Strzyga była istotą, której pochodzenie i sposób działania były podobne do tych dwóch stworów, dlatego uważa się, że w polskich wierzeniach ludowych mamy do czynienia z jedną postacią znaną w różnych regionach pod kilkoma różnymi nazwami. Do XVIII wieku mówiono bowiem w Polsce na upiora „strzyga” lub „wieszczyca”. Od XVIII wieku stosowano już nazwę „upiór”, kojarząc stwora z demonem fruwającym. Z kolei cechy czarownictwa kojarzone są w polskich źródłach bardziej ze strzygoniem lub strzygą niż z upiorem.<br>Gdy rozpoznano strzygę, przepędzano ją z ludzkich siedzib. Ginęły zazwyczaj w młodym wieku. Gdy jednak jedna dusza umierała, druga żyła dalej, mszcząc się za krzywdy tej pierwszej. Aby przetrwać, musiała polować.</p>
+			</article>
+			<article>
+				<h4>Charakterystyka</h4>
+				<p>Posiadały dwa serca i dwa szeregi zębów. Zazwyczaj przedstawiane, jako krzyżówka człowieka i sowy. Miały nieproporcjonalnie dużą głowę względem ciała, czerwone ślepia i szpony zbliżone do ptasich. Niepozorne na pierwszy rzut oka, jednak szybkie, zwinne i silne na tyle, że były w stanie powalić dorosłego mężczyznę bądź krowę.</p>
+			</article>
+			<article>
+				<h4>Wierzenia</h4>
+				<p>Strzygami zostawali ludzie, którzy urodzili się ze zrośniętymi brwiami, dwiema duszami, dwoma sercami i podwójnym szeregiem zębów, z czego ten drugi był słabo zauważalny. O bycie strzygą posądzano również lunatyków i osoby bez włosów pod pachami.<br><br>Uważano także, iż strzygą jest noworodek, który urodził się z wykształconymi zębami, natomiast starcy mówiący do siebie też mogli być uznani za strzygi.<br>W czasach epidemii często do grobów wkładano ludzi chorych, lecz żywych. Niektórym udawało się wykopać gołymi rękami. Błądzili oni potem z zakrwawionymi rękami, poodrywanymi paznokciami, chorzy i osłabieni. Byli wówczas uważani za strzygi.</p>
+			</article>
+			<article>
+				<h4>Zachowanie</h4>
+				<p>Strzygi latały po nocach w postaci sowy i wysysała krew oraz wnętrzności ludzi, najchętniej dzieci. Jeżeli nie napotykały ludzi, potrafiły się przez jakiś czas zadowolić krwią zwierząt. Zazwyczaj poza polowaniem chodziło o zemstę za krzywdy wyrządzone podczas pierwszego żywota.<br>Według innych źródeł, strzygi nie szkodzą ludziom. Podobnie, jak banshee, zwiastują pewną śmierć kogoś z domowników. Ich przywiązanie do świata żywych wynikało z braku chrztu jednej z dusz i uniemożliwiało to wkroczenie do zaświatów. Zarówno męskie, jak i żeńskie wersje strzyg mogły wracać do swoich żyjących członków rodziny, do swoich domostw i nocami wykonywać swoje dawne obowiązki. Wpływało to na stan rodziny – ich niewyspanie, osłabienie, bladość itd. zrzucano właśnie na działalność strzyg. Strzygonie mogły też psuć świece w kościele.</p>
+			</article>
+			<article>
+				<h4>Metody ochrony</h4>
+				<p>Sposobem na zapobiegnięcie przeistoczeniu się człowieka w strzygę było pochowanie go w specjalny sposób np. twarzą do dołu, z przepaską na oczach, włożenie krzemienia do ust, włożenie pod język kartki z napisem Jezus lub włożenie do trumny drobnych przedmiotów, by strzygoń zajął się ich liczeniem. Innym sposobem było spalenie lub powbijanie gwoździ, pali albo kołka osikowego w różne części ciała zmarłej osoby.<br>Podobno działającą metodą na przepędenie strzygonia było wymierzenie mu policzka lewą ręką. Aby chronić swój dom przed strzygą skuteczne było rozsypanie na krzyż maku w każdym kącie domu. Zabicie w kościelny dzwon również zabijało strzygonia (zamieniało go w smołę).<br>Niektóre podania głoszą, że aby odczarować lub zabić strzygę, należałoby spędzić noc w jej krypcie, śpiąc twarzą w kierunku ziemi. Ponieważ strzygi wykazywały większą aktywność w nocy, w dzień zaś spały, było to trudne zadanie.</p>
+			</article>
+			<div class="clear"></div>
+		</div>
+		<aside>
+			<header><h3>Popularne artykuły</h3></header>
+			<article>
+				<div class="text">
+					<h4>Utopiec</h4>
+					<p>Demony słowiańskie znane na obszarze całej słowiańszczyzn. Ich nazwa wywodzi się od nazwy "utopić" (przyczynić się świadomie do uduszenia się danej osoby pod wodą). Dzielą pewne cechy z wodnikami i topielcami, co daje podstawy do utożsamiania ich z innymi demonami wodnymi. Wbrew powszechnej opinii ...</p>
+				</div>
+				<a href="#" target="_self">Czytaj więcej</a>
+			</article>
+			<article>
+				<div class="text">
+					<h4>Troll</h4>
+					<p>Wierzono, że trolle różniły się między sobą zarówno wyglądem, jak i charakterem. Najczęściej miały to być stworzenia bardzo stare, brzydkie, złośliwe i mało inteligentne. Można było wśród nich znaleźć olbrzymy, jak i niewielkiego wzrostu skrzaty czy karły. Często miały wiele głów ...</p>
+				</div>
+				<a href="#" target="_self">Czytaj więcej</a>
+			</article>
+			<article id="last">
+				<div class="text">
+					<h4>Smok</h4>
+					<p>Legendarne stworzenie, zwykle rodzaj olbrzymiego, skrzydlatego gada. Występuje w mitach i podaniach z całego świata, choć dawni pisarze twierdzą, iż zamieszkiwały głównie pustynie Bliskiego Wschodu. Najbardziej popularnym typem smoka jest jego europejski wizerunek jako obrzydliwej, ziejącej ogniem bestii zwanej potocznie Wiwerną ...</p>
+				</div>
+				<a href="#" target="_self">Czytaj więcej</a>
+			</article>
+			<div class="clear"></div>
+		</aside> 
 	</main>
 	<footer>
 	<div>

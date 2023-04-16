@@ -119,10 +119,6 @@ h1
 			{
 				.cell(15px);
 				border-right:1px dashed @dark-green;
-				&:hover
-				{
-					background-color:@light-green;
-				}
 				&#chosen
 				{
 					background-color:@dark-green;
@@ -146,10 +142,6 @@ h1
 	{
 		.cell(15px);
 		border-left:1px dashed @dark-green;
-		&:hover
-		{
-			background-color:@light-green;
-		}
 	}
 	&:hover
 	{
@@ -162,6 +154,15 @@ h1
 	{
 		.submenu(20%);
 		min-width:100px;
+	}
+	img
+	{
+		max-height:1em;
+		margin-left:10px;
+		@media @phone
+		{
+			display:none;
+		}
 	}
 }
 
@@ -183,27 +184,8 @@ h1
 			.cell(5px);
 			width:100%;
 			border-top:1px dashed @dark-green;
-			&:hover
-			{
-				background-color:@light-green;
-			}
 		}
 	}
-}
-
-.cell(@padding)
-{
-	display:block;
-	box-sizing: border-box;
-	padding:@padding;
-	background-color:@green;
-	text-align:center;
-	font-size:16px;
-	color:inherit;
-	font-weight: inherit;
-	white-space: inherit;
-	text-decoration:inherit;
-	overflow:inherit;
 }
 
 #sidenav
@@ -249,23 +231,26 @@ main
 	margin-top:@topmargin;
 	padding:15px;
 	background-color:white;
-	article{
-		display:block;
-		float:left;
-		font-size:16px;
-		//&:not(#first)
-		@media @tablet
+	#content
+	{
+		article
 		{
-			&#first
+			display:block;
+			float:left;
+			font-size:16px;
+			@media @tablet
+			{
+				&#first
+				{
+					width:80%;
+					max-width:calc(100% - 230px);
+				}
+			}
+			@media @large
 			{
 				width:80%;
 				max-width:calc(100% - 230px);
 			}
-		}
-		@media @large
-		{
-			width:80%;
-			max-width:calc(100% - 230px);
 		}
 	}
 }
@@ -273,12 +258,17 @@ main
 h2
 {
 	font-size:24px;
-	margin: 0;
+	margin:0;
 	margin-bottom:20px;
 	@media @tablet
 	{
 		margin:0;
 	}
+}
+
+h3
+{
+	font-size:20px;
 }
 
 h4
@@ -328,7 +318,7 @@ p
 	{
 		max-width: 100%;
 		height: auto;
-		border: 2px solid black;
+		border: 2px solid @dark-green;
 	}
 	#stats
 	{
@@ -356,6 +346,41 @@ p
 	font-weight: bold;
 }
 
+aside
+{
+	article
+	{
+		box-sizing: border-box;
+		padding:10px;
+		border:2px solid @dark-green;
+		font-size:16px;
+		&:not(#last)
+		{
+			margin-bottom:15px;
+		}
+		@media @tablet
+		{
+			float:left;
+			width:30%;
+			&:not(#last)
+			{
+				margin-right:5%;
+				margin-bottom:0;
+			}
+		}
+		h4
+		{
+			margin-top:0;
+			font-size:18px;
+		}
+		a
+		{
+			margin-top:10px;
+			.cell(5px);
+		}
+	}
+}
+
 footer
 {
 	font-size:14px;
@@ -381,6 +406,25 @@ footer
 	div
 	{
 		margin-left:10%;
+	}
+}
+
+.cell(@padding)
+{
+	display:block;
+	box-sizing: border-box;
+	padding:@padding;
+	background-color:@green;
+	text-align:center;
+	font-size:16px;
+	color:white;
+	font-weight: bold;
+	white-space: inherit;
+	text-decoration:inherit;
+	overflow:inherit;
+	&:hover
+	{
+		background-color:@light-green;
 	}
 }
 

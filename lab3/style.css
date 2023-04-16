@@ -61,12 +61,15 @@ h1 {
   background-color: #009933;
   text-align: center;
   font-size: 16px;
-  color: inherit;
-  font-weight: inherit;
+  color: white;
+  font-weight: bold;
   white-space: inherit;
   text-decoration: inherit;
   overflow: inherit;
   width: 100%;
+}
+#nav_small p:hover {
+  background-color: #00cc00;
 }
 #nav_small ul {
   display: none;
@@ -89,8 +92,8 @@ h1 {
   background-color: #009933;
   text-align: center;
   font-size: 16px;
-  color: inherit;
-  font-weight: inherit;
+  color: white;
+  font-weight: bold;
   white-space: inherit;
   text-decoration: inherit;
   overflow: inherit;
@@ -124,8 +127,8 @@ h1 {
   background-color: #009933;
   text-align: center;
   font-size: 16px;
-  color: inherit;
-  font-weight: inherit;
+  color: white;
+  font-weight: bold;
   white-space: inherit;
   text-decoration: inherit;
   overflow: inherit;
@@ -153,8 +156,8 @@ h1 {
   background-color: #009933;
   text-align: center;
   font-size: 16px;
-  color: inherit;
-  font-weight: inherit;
+  color: white;
+  font-weight: bold;
   white-space: inherit;
   text-decoration: inherit;
   overflow: inherit;
@@ -187,8 +190,8 @@ h1 {
   background-color: #009933;
   text-align: center;
   font-size: 16px;
-  color: inherit;
-  font-weight: inherit;
+  color: white;
+  font-weight: bold;
   white-space: inherit;
   text-decoration: inherit;
   overflow: inherit;
@@ -197,6 +200,15 @@ h1 {
 }
 #language ul li a:hover {
   background-color: #00cc00;
+}
+#language img {
+  max-height: 1em;
+  margin-left: 10px;
+}
+@media only screen and (max-width: 480px) {
+  #language img {
+    display: none;
+  }
 }
 #sidenav {
   display: none;
@@ -240,19 +252,19 @@ main {
     width: 80%;
   }
 }
-main article {
+main #content article {
   display: block;
   float: left;
   font-size: 16px;
 }
 @media only screen and (min-width: 768px) {
-  main article#first {
+  main #content article#first {
     width: 80%;
     max-width: calc(100% - 230px);
   }
 }
 @media only screen and (min-width: 1200px) {
-  main article {
+  main #content article {
     width: 80%;
     max-width: calc(100% - 230px);
   }
@@ -266,6 +278,9 @@ h2 {
   h2 {
     margin: 0;
   }
+}
+h3 {
+  font-size: 20px;
 }
 h4 {
   margin-top: 20px;
@@ -311,7 +326,7 @@ p {
 #side img {
   max-width: 100%;
   height: auto;
-  border: 2px solid black;
+  border: 2px solid #003300;
 }
 #side #stats {
   box-sizing: border-box;
@@ -335,6 +350,46 @@ p {
 }
 .label {
   font-weight: bold;
+}
+aside article {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 2px solid #003300;
+  font-size: 16px;
+}
+aside article:not(#last) {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 768px) {
+  aside article {
+    float: left;
+    width: 30%;
+  }
+  aside article:not(#last) {
+    margin-right: 5%;
+    margin-bottom: 0;
+  }
+}
+aside article h4 {
+  margin-top: 0;
+  font-size: 18px;
+}
+aside article a {
+  margin-top: 10px;
+  display: block;
+  box-sizing: border-box;
+  padding: 5px;
+  background-color: #009933;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  white-space: inherit;
+  text-decoration: inherit;
+  overflow: inherit;
+}
+aside article a:hover {
+  background-color: #00cc00;
 }
 footer {
   font-size: 14px;
